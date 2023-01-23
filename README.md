@@ -9,6 +9,7 @@ More information will follow!
 
 All experiments were done using code from https://github.com/ultralytics/yolov5. 
 To start training and validation we used the command line script from that repository:
+
     python train.py --data custom_data.yaml --epochs 300 --weights yolov5n.pt
     --cfg yolov5n.yaml --batch-size 16 --img-size 640 --save-txt
 
@@ -20,6 +21,7 @@ which are stored in ./code/yolov5/runs folder.
 StrongSORT tracking was done using the following GitHub repository: https://github.com/mikel-brostrom/yolov8_tracking. 
 It works the same way as YoloV5 repo we used, by sending commands in the CLI we perform tracking using our pretrained YoloV5 network weights.
 Example usage: 
+
     python track.py --yolo-weights ./weights/best_weights_v5n.pt --tracking-method strongsort 
     --conf-thres 0.3 --iou-thres 0.05 --img-size 640 --save-txt --save-vid
 
